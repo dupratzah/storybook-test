@@ -1,0 +1,84 @@
+$component: '.app-button';
+
+$yellow:#ffee00;
+$red:#ff2600;
+$blue:#007bff;
+$green:#00ff37;
+
+#{$component} {
+
+  display: inline-block;
+  font-weight: 800;
+  color: #212529;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  border-radius: .25rem;
+  transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  color: #fff;
+  background-color: $blue;
+  border-color: $blue;
+  margin-top: .25rem;
+  margin-bottom: .25rem;
+  cursor: pointer;
+  transition: all 0.45s;
+
+  &--yellow {
+    background-color: $yellow;
+    border-color: $yellow;
+  }
+
+  &--green {
+    background-color: $green;
+    border-color: $green;
+  }
+
+  &--red {
+    background-color: $red;
+    border-color: $red;
+  }
+
+  &--disabled {
+    background-color:lightgray;
+    border-color: grey;
+    cursor: not-allowed;
+  }
+
+  &--outline {
+    background-color: transparent;
+    border-color: currentColor;
+    color:$blue;
+
+    &#{$component}--yellow {
+      color: $yellow;
+    }
+
+    &#{$component}--green {
+      color: $green;
+    }
+
+    &#{$component}--red {
+      color: $red;
+    }
+
+    &#{$component}--disabled {
+	  color:grey;
+    }
+  }
+
+  &:hover{
+	  transform: scale(1.1);
+  }
+
+  &:active{
+	  transform: scale(1.2);
+  }
+}
